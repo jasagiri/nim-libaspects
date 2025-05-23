@@ -1,7 +1,7 @@
 # Package
 
-version       = "0.1.0"
-author        = "PaaS-nibuild Team"
+version       = "0.0.0"
+author        = "jasagiri"
 description   = "Shared aspect libraries for Nim development tools"
 license       = "MIT"
 srcDir        = "src"
@@ -12,7 +12,7 @@ installExt    = @["nim"]
 requires "nim >= 2.0.0"
 requires "results >= 0.5.0"
 requires "parsetoml >= 0.7.2"
-# requires "../nim-lang-core"  # Local dependency - uncomment when nim-lang-core is installed
+requires "https://github.com/jasagiri/nim-lang-core.git"
 binDir        = "build/bin"
 
 # Tasks
