@@ -1,0 +1,61 @@
+{
+  "health_checks": {
+    "database": {
+      "description": "Check database connectivity",
+      "status": "healthy"
+    },
+    "api": {
+      "description": "Check API responsiveness",
+      "status": "healthy"
+    }
+  },
+  "resources": {
+    "cpu": {
+      "type": "cpu",
+      "threshold": 0.0,
+      "interval": 10
+    },
+    "disk": {
+      "type": "disk",
+      "threshold": 0.0,
+      "interval": 10
+    },
+    "job_queue": {
+      "type": "custom",
+      "threshold": 0.0,
+      "interval": 10
+    },
+    "memory": {
+      "type": "memory",
+      "threshold": 0.0,
+      "interval": 10
+    }
+  },
+  "alerts": [
+    {
+      "id": "1_1747555023",
+      "rule": "high_memory",
+      "severity": "warning",
+      "message": "Alert: high_memory - memory > 80.0",
+      "timestamp": 1747555023
+    },
+    {
+      "id": "2_1747555023",
+      "rule": "queue_backlog",
+      "severity": "info",
+      "message": "Alert: queue_backlog - job_queue > 500.0",
+      "timestamp": 1747555023
+    },
+    {
+      "id": "3_1747555028",
+      "rule": "high_memory",
+      "severity": "warning",
+      "message": "Alert: high_memory - memory > 80.0",
+      "timestamp": 1747555028
+    }
+  ],
+  "app_state": {
+    "server": "running",
+    "maintenance_mode": "false"
+  }
+}
